@@ -27,7 +27,7 @@ def monoclinic_two_fracture_sets():
 
     # Background stiffnesses (GPa)
     C33b = rho * Vp0**2 / 1e9
-    C44b = rho * Vs0**2 / 1e6
+    C44b = rho * Vs0**2 / 1e9
 
     epsilon = 0.1
     gamma = 0.15
