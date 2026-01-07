@@ -10,7 +10,7 @@ phi1 = pi/4; phi2 = pi/2;   % azimuth angles of fracture sets
 
 rho = 2300;  % density in kg/m^3
 Vp0 = 2600; Vs0 = 1200; % (P and S-waves vertical velocities in m/s)
-C33b = rho*Vp0^2/1e9; C44b = rho*Vs0^2/1e6; % stiffnesses in GPa
+C33b = rho*Vp0^2/1e9; C44b = rho*Vs0^2/1e9; % stiffnesses in GPa
 epsilon = 0.1; gamma = 0.15; delta = 0.05; 
 
 C11b = (2*epsilon +1)*C33b;
