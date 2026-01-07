@@ -4,8 +4,9 @@ Effective seismic models from fractured rocks
 ## Overview
 This repository contains research code for computing **stiffness coefficients in fractured media**
 from **fracture parameters and background elastic parameters**. The formulation is based on the **linear slip theory**.
+The scripts were originally written in MATLAB and later transformed to Python codes. Both versions for different fractured-anisotropic media are available.
 
-The code is intended for **research and educational purposes** and is under active development.
+The codes are intended for **research and educational purposes** and is under active development.
 
 ---
 
