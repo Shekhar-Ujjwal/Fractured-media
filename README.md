@@ -25,7 +25,6 @@ The codes are intended for **research and educational purposes** and is under ac
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
-└── .gitignore
 
 ## Requirements
 MATLAB/Python
@@ -41,7 +40,7 @@ If you use this code in your research, please cite this GitHub repository and th
 2. Schoenberg, M. (1983) Reflection of elastic waves from periodically stratified media with interfacial slip, Geophysical Prospecting, 31(2), 265–292.
 3. Schoenberg, M. and Helbig, K. (1997) Orthorhombic media: Modeling elastic wave behavior in a vertically fractured earth, Geophysics, 62(6), 1954–1974.
 4. Shekhar, U., Jakobsen, M., Pšenčík, I. and Xiang, K. (2025) Seismic full waveform inversion for fracture parameters in anisotropic media
-   , Geophysical Prospecting, 73(5), 1606–1634, 2025.
+   , Geophysical Prospecting, 73(5), 1606–1634.
 
 ---
 
