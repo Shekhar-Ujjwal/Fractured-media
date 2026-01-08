@@ -49,7 +49,7 @@ C0 = [
     c13 = c13_b .* (1 - delN);
     c22 = c11_b .* (1 - delN .* (c12_b/c11_b)^2);
     c23 = c13_b .* (1 - delN .* (c12_b/c11_b));
-    c33 = c33_B .* (1 - delN .* ((c13_b)^2 / (c33_b*c11_b)));
+    c33 = c33_b .* (1 - delN .* ((c13_b)^2 / (c33_b*c11_b)));
     c44 = c44_b .* ones(size(delN));   % the yz-plane is parallel to the fracture-plane
     c55 = c44_b .* (1 - delV);
     c66 = c66_b .* (1 - delH);
@@ -73,5 +73,6 @@ c44 = c44_b;
 c55 = c44_b .* (1 - delV);
 c66 = c66_b .* (1 - delH);
 %% Case 2 ends here
+
 
 save VFTI_model c11 c12 c13 c22 c23 c33 c44 c55 c66     % saves the model in a file for further use
