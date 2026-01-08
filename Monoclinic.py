@@ -11,7 +11,7 @@ import numpy as np
 
 def monoclinic_two_fracture_sets():
     # ------------------------------------------------------------
-    # Fracture weaknesses
+    # Fracture weaknesses (normal, vertical-tangential, horizontal-tangential)
     delN1, delV1, delH1 = 0.10, 0.15, 0.20
     delN2, delV2, delH2 = 0.06, 0.10, 0.15
 
@@ -22,13 +22,14 @@ def monoclinic_two_fracture_sets():
     # ------------------------------------------------------------
     # VTI background parameters
     rho = 2300.0          # kg/m^3
-    Vp0 = 2600.0          # m/s
-    Vs0 = 1200.0          # m/s
+    Vp0 = 2600.0          # m/s (P-wave vertical velocity)
+    Vs0 = 1200.0          # m/s (S-wave vertical velocity)
 
     # Background stiffnesses (GPa)
     C33b = rho * Vp0**2 / 1e9
     C44b = rho * Vs0**2 / 1e9
-
+    
+    # Thomsen (1986) parameters
     epsilon = 0.1
     gamma = 0.15
     delta = 0.05
@@ -100,7 +101,6 @@ def monoclinic_two_fracture_sets():
     Cmono = Cb @ np.linalg.inv(
         I6 + (R1 @ D1 @ R1.T + R2 @ D2 @ R2.T) @ Cb
     )
-
     # ------------------------------------------------------------
     # Density-normalized stiffness coefficients
     A = {
@@ -120,7 +120,9 @@ def monoclinic_two_fracture_sets():
     }
 
     return Cmono, A
-
+    
+# Note that any number of fracture sets can be included 
+# by adding their compliances in a similar fashion
 
 if __name__ == "__main__":
     Cmono, A = monoclinic_two_fracture_sets()
